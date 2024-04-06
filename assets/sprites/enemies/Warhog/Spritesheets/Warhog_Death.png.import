@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpfiw1l40utc5"
-path="res://.godot/imported/pendleton_pig.png-f0d027dadf8a32e330d550e8e8d0c1d9.ctex"
+uid="uid://dikidat2pql7i"
+path="res://.godot/imported/Warhog_Death.png-17da828f697087cf3abb9493f2701e40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/pendleton_pig.png"
-dest_files=["res://.godot/imported/pendleton_pig.png-f0d027dadf8a32e330d550e8e8d0c1d9.ctex"]
+source_file="res://assets/sprites/enemies/Warhog/Spritesheets/Warhog_Death.png"
+dest_files=["res://.godot/imported/Warhog_Death.png-17da828f697087cf3abb9493f2701e40.ctex"]
 
 [params]
 

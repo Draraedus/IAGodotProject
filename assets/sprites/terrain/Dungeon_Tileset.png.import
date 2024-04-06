@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dikidat2pql7i"
-path="res://.godot/imported/Warhog_Death.png-c7db44fa8830b8ed7e2c93a9fbc12960.ctex"
+uid="uid://illjb2epfe3a"
+path="res://.godot/imported/Dungeon_Tileset.png-81cd988006005dce71336fadab309a82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/Warhog/Spritesheets/Warhog_Death.png"
-dest_files=["res://.godot/imported/Warhog_Death.png-c7db44fa8830b8ed7e2c93a9fbc12960.ctex"]
+source_file="res://assets/sprites/terrain/Dungeon_Tileset.png"
+dest_files=["res://.godot/imported/Dungeon_Tileset.png-81cd988006005dce71336fadab309a82.ctex"]
 
 [params]
 

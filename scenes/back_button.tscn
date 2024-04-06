@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyk2gh5muq5xp"]
+
+[ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="1_4yk1i"]
+[ext_resource type="Script" path="res://scripts/BackButton.gd" id="2_jnhrp"]
+
+[sub_resource type="FontVariation" id="FontVariation_ga5q4"]
+base_font = ExtResource("1_4yk1i")
+
+[node name="BackButton" type="Button"]
+texture_filter = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -51.0
+offset_bottom = 26.0
+grow_horizontal = 0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_ga5q4")
+text = "Voltar"
+flat = true
+script = ExtResource("2_jnhrp")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_back_button_pressed"]

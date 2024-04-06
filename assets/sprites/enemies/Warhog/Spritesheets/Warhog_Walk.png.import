@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqenn35fuxtok"
-path="res://.godot/imported/Warhog_Attack.png-991bd2a7120557719bbc928393c58811.ctex"
+uid="uid://y174so6bhj5t"
+path="res://.godot/imported/Warhog_Walk.png-f2f483663f4ed410cb937d72fe47d524.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/Warhog/Spritesheets/Warhog_Attack.png"
-dest_files=["res://.godot/imported/Warhog_Attack.png-991bd2a7120557719bbc928393c58811.ctex"]
+source_file="res://assets/sprites/enemies/Warhog/Spritesheets/Warhog_Walk.png"
+dest_files=["res://.godot/imported/Warhog_Walk.png-f2f483663f4ed410cb937d72fe47d524.ctex"]
 
 [params]
 

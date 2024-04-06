@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://illjb2epfe3a"
-path="res://.godot/imported/Dungeon_Tileset.png-0f075f9f783ceff78468669af6f1cb51.ctex"
+uid="uid://b7xkmfcao6a8s"
+path="res://.godot/imported/Warhog_Idle.png-4dcfe1d1221ff176a205870bc7c1cae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/terrain/Dungeon_Tileset.png"
-dest_files=["res://.godot/imported/Dungeon_Tileset.png-0f075f9f783ceff78468669af6f1cb51.ctex"]
+source_file="res://assets/sprites/enemies/Warhog/Spritesheets/Warhog_Idle.png"
+dest_files=["res://.godot/imported/Warhog_Idle.png-4dcfe1d1221ff176a205870bc7c1cae7.ctex"]
 
 [params]
 

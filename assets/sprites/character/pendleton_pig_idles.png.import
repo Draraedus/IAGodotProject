@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y174so6bhj5t"
-path="res://.godot/imported/Warhog_Walk.png-6a4155899904fb632ff46b8da65c792a.ctex"
+uid="uid://b7wjt418eix0n"
+path="res://.godot/imported/pendleton_pig_idles.png-c5c925bdf7fcd103d4c833c91638e997.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemies/Warhog/Spritesheets/Warhog_Walk.png"
-dest_files=["res://.godot/imported/Warhog_Walk.png-6a4155899904fb632ff46b8da65c792a.ctex"]
+source_file="res://assets/sprites/character/pendleton_pig_idles.png"
+dest_files=["res://.godot/imported/pendleton_pig_idles.png-c5c925bdf7fcd103d4c833c91638e997.ctex"]
 
 [params]
 

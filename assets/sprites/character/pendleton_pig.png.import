@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7wjt418eix0n"
-path="res://.godot/imported/pendleton_pig_idles.png-2b050abdcb71bab5c549f8166c34d43c.ctex"
+uid="uid://cpfiw1l40utc5"
+path="res://.godot/imported/pendleton_pig.png-3e1a2c1b336be676cda5562812ef10fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character/pendleton_pig_idles.png"
-dest_files=["res://.godot/imported/pendleton_pig_idles.png-2b050abdcb71bab5c549f8166c34d43c.ctex"]
+source_file="res://assets/sprites/character/pendleton_pig.png"
+dest_files=["res://.godot/imported/pendleton_pig.png-3e1a2c1b336be676cda5562812ef10fb.ctex"]
 
 [params]
 

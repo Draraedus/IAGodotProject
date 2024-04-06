@@ -1,9 +1,9 @@
 [gd_scene load_steps=4 format=3 uid="uid://c8v8307fugo6y"]
 
-[ext_resource type="Texture2D" uid="uid://illjb2epfe3a" path="res://assets/terrain/Dungeon_Tileset.png" id="1_uiwlf"]
+[ext_resource type="Texture2D" uid="uid://illjb2epfe3a" path="res://assets/sprites/terrain/Dungeon_Tileset.png" id="1_5u4t5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rkwwl"]
-texture = ExtResource("1_uiwlf")
+texture = ExtResource("1_5u4t5")
 0:5/0 = 0
 0:5/0/terrain_set = 0
 0:5/0/terrains_peering_bit/bottom_left_corner = 0
