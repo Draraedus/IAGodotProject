@@ -50,7 +50,9 @@ vertical_alignment = 1
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-text = "O jogo foi desenvolvido por Adriel Luiz, Gabriel Marques, Isabela de Gondra e Jean Charles. O jogo foi idealizado em PacMan no conceito de fuga de monstros dentro de uma mapa 2D, porém nossa idéia foi utilizar IA para uma gameplay progressiva e desafiadora dentro do jogo, o jogo foi desenvolvido para a matéria de de Inteligência Artificial."
+text = "O jogo foi desenvolvido por Adriel Luiz, Gabriel Marques, Isabela de Gondra e Jean Charles.
+O jogo foi idealizado em PacMan no conceito de fuga de monstros dentro de uma mapa 2D, porém nossa idéia foi utilizar IA para uma gameplay progressiva e desafiadora dentro do jogo. 
+O jogo foi desenvolvido para a matéria de de Inteligência Artificial."
 fit_content = true
 scroll_active = false
 
