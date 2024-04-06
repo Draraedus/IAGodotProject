@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://1o3v8i1adiqm"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_w3cy3"]
-[ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/player.tscn" id="2_3pgsj"]
+[ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="2_3pgsj"]
 
 [node name="Node2D" type="Node2D"]
 

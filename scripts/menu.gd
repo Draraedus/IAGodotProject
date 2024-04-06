@@ -11,13 +11,16 @@ func _ready():
 func on_button_pressed(button: Button):
 	match button.name:
 		"Play":
-			var _game: bool = get_tree().change_scene_to_file("res://scenes/game.tscn")
+			var _game: bool = get_tree().change_scene_to_file("res://scenes/game/game.tscn")
+			
+		"Configs":
+			var _configs: bool = get_tree().change_scene_to_file("res://scenes/ui/configs.tscn")
 			
 		"Controls":
-			var _controls: bool = get_tree().change_scene_to_file("res://scenes/controls.tscn")
+			var _controls: bool = get_tree().change_scene_to_file("res://scenes/ui/controls.tscn")
 			
 		"About":
-			var _about: bool = get_tree().change_scene_to_file("res://scenes/about.tscn")
+			var _about: bool = get_tree().change_scene_to_file("res://scenes/ui/about.tscn")
 			
 		"Github":
 			var _open_github: bool = OS.shell_open("https://github.com/Draraedus/IAGodotProject")
