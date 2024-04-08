@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://k4fojf34r1kp"]
+[gd_scene load_steps=8 format=3 uid="uid://k4fojf34r1kp"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_jtbva"]
 [ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="2_e7me5"]
+[ext_resource type="AudioStream" uid="uid://cfjym5j2otdxb" path="res://assets/music/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="3_o0v30"]
 
 [sub_resource type="FontVariation" id="FontVariation_88aug"]
 base_font = ExtResource("2_e7me5")
@@ -145,3 +146,7 @@ theme_override_fonts/font = SubResource("FontVariation_ruase")
 theme_override_font_sizes/font_size = 22
 text = "Sair"
 flat = true
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_o0v30")
+autoplay = true

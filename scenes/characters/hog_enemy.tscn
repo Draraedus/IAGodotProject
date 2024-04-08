@@ -1,38 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://cxvle1j5jhtg0"]
+[gd_scene load_steps=25 format=3 uid="uid://cxvle1j5jhtg0"]
 
 [ext_resource type="Texture2D" uid="uid://bjc7cohksxbsn" path="res://assets/sprites/enemies/Warhog/Spritesheets/Warhog.png" id="1_l2svg"]
+[ext_resource type="Script" path="res://scripts/hog_enemy.gd" id="1_yfic4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcl61"]
 size = Vector2(21, 7)
-
-[sub_resource type="Animation" id="Animation_xxj43"]
-resource_name = "idle_up"
-length = 0.4
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [0, 0, 1, 2]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-3, -16)]
-}
 
 [sub_resource type="Animation" id="Animation_rldiq"]
 length = 0.001
@@ -59,6 +31,35 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-2.5, -16)]
+}
+
+[sub_resource type="Animation" id="Animation_xjlla"]
+resource_name = "idle_down"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3, -16)]
 }
 
 [sub_resource type="Animation" id="Animation_c7exs"]
@@ -119,8 +120,8 @@ tracks/1/keys = {
 "values": [Vector2(1, -16)]
 }
 
-[sub_resource type="Animation" id="Animation_xjlla"]
-resource_name = "idle_down"
+[sub_resource type="Animation" id="Animation_xxj43"]
+resource_name = "idle_up"
 length = 0.4
 loop_mode = 1
 tracks/0/type = "value"
@@ -133,7 +134,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [12, 13, 14, 15]
+"values": [0, 0, 1, 2]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -327,8 +328,10 @@ states/idle/position = Vector2(559, 100)
 states/walk/node = SubResource("AnimationNodeBlendSpace2D_k4xl8")
 states/walk/position = Vector2(559, 169)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="hog_enemy" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 texture_filter = 1
+script = ExtResource("1_yfic4")
+_animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -3.5)
