@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cv0oyenqbcah8"]
 
-[ext_resource type="PackedScene" uid="uid://dyk2gh5muq5xp" path="res://scenes/back_button.tscn" id="1_mg6ch"]
+[ext_resource type="PackedScene" uid="uid://dyk2gh5muq5xp" path="res://scenes/ui/back_button.tscn" id="1_mg6ch"]
 [ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="2_2jon4"]
 
 [sub_resource type="FontVariation" id="FontVariation_adr6s"]
@@ -25,7 +25,7 @@ color = Color(0.137255, 0, 0, 1)
 
 [node name="BackButton" parent="." instance=ExtResource("1_mg6ch")]
 layout_mode = 1
-scene_path = "res://scenes/menu.tscn"
+scene_path = "res://scenes/ui/menu.tscn"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
