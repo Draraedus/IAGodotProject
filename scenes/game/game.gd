@@ -31,5 +31,3 @@ func _process(delta):
 	if $hog_enemy && !path.size() <= 1:
 		if mob.position.distance_to(path[0]) < mob._move_speed * delta:
 			path.pop_front()
-	#print(path)
-

@@ -1,6 +1,5 @@
 extends Node
 
-
 class NodeAux:
 	var position: Vector2
 	var parent: NodeAux = null
