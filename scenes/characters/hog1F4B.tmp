@@ -279,10 +279,10 @@ _data = {
 }
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xdj0m"]
-animation = &"idle_up"
+animation = &"idle_down"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_syvbi"]
-animation = &"idle_down"
+animation = &"idle_up"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_v3mou"]
 animation = &"idle_left"
@@ -301,10 +301,10 @@ blend_point_3/node = SubResource("AnimationNodeAnimation_2yt0e")
 blend_point_3/pos = Vector2(1, 0)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_dpwdi"]
-animation = &"walk_up"
+animation = &"walk_down"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5jgbo"]
-animation = &"walk_down"
+animation = &"walk_up"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5pbyn"]
 animation = &"walk_left"

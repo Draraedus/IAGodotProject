@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://1o3v8i1adiqm"]
+[gd_scene load_steps=7 format=3 uid="uid://1o3v8i1adiqm"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_exowq"]
+[ext_resource type="Script" path="res://assets/sprites/level_1.gd" id="1_q0m30"]
 [ext_resource type="PackedScene" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_ndoes"]
 [ext_resource type="PackedScene" uid="uid://bmhak1qujoph6" path="res://assets/sprites/terrain/components/scenes/door_component.tscn" id="3_kwhuy"]
 [ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="4_87v1t"]
+[ext_resource type="PackedScene" uid="uid://cxvle1j5jhtg0" path="res://scenes/characters/hog_enemy.tscn" id="5_fakdc"]
 
 [node name="level_1" type="Node2D"]
+script = ExtResource("1_q0m30")
 
 [node name="TileMap" parent="." instance=ExtResource("1_exowq")]
 position = Vector2(0, -2)
@@ -46,3 +49,6 @@ scale = Vector2(1.4, 1.4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
+
+[node name="hog_enemy" parent="." instance=ExtResource("5_fakdc")]
+position = Vector2(258, 231)
