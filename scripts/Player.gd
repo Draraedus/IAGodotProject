@@ -11,13 +11,23 @@ var _state_machine
 @export_category("Objects")
 @export var _animation_tree: AnimationTree = null
 
+var game_over : bool = false
+
 func _ready():
 	_state_machine = _animation_tree["parameters/playback"]
+	
+func _process(delta):
+	if game_over == true:
+		get_tree().change_scene_to_file("res://scenes/ui/game_over_message.tscn")
 
 func _physics_process(delta: float):
 	_move()
 	_animate()
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		if get_slide_collision(0).get_collider().name == "hog_enemy":
+			game_over = true
 	
 func _move():
 	var _direction: Vector2 = Vector2(

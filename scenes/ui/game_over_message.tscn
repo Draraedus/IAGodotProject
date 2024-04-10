@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckeqgvutmu8ib"]
+
+[ext_resource type="Script" path="res://scripts/game_over_message.gd" id="1_ki0fv"]
+[ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="2_hgu7v"]
+
+[sub_resource type="FontVariation" id="FontVariation_unh6r"]
+base_font = ExtResource("2_hgu7v")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7ly5h"]
+font_size = 74
+font_color = Color(0.917647, 0, 0.145098, 1)
+
+[node name="game_over_message" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ki0fv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -251.5
+offset_top = -139.0
+offset_right = 251.5
+offset_bottom = 139.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 9
+alignment = 1
+
+[node name="game_over" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_unh6r")
+theme_override_font_sizes/font_size = 24
+text = "GAME OVER
+"
+label_settings = SubResource("LabelSettings_7ly5h")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_unh6r")
+theme_override_font_sizes/font_size = 24
+text = "Voltar ao menu"
+flat = true

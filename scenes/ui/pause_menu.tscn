@@ -1,0 +1,165 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmag50sxwdpxq"]
+
+[ext_resource type="Script" path="res://scripts/CanvasLayer.gd" id="1_ncowa"]
+[ext_resource type="Script" path="res://scripts/pause_principal.gd" id="2_iup76"]
+[ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="3_e75bg"]
+[ext_resource type="Script" path="res://scripts/pause_controls.gd" id="4_drmau"]
+
+[sub_resource type="FontVariation" id="FontVariation_6aekh"]
+base_font = ExtResource("3_e75bg")
+
+[sub_resource type="FontVariation" id="FontVariation_noiuc"]
+base_font = ExtResource("3_e75bg")
+
+[sub_resource type="FontVariation" id="FontVariation_jxpuf"]
+base_font = ExtResource("3_e75bg")
+
+[sub_resource type="FontVariation" id="FontVariation_7sef3"]
+base_font = ExtResource("3_e75bg")
+
+[node name="Pause_menu" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_ncowa")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0, 0, 0.776471)
+
+[node name="pause_principal" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_iup76")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause_principal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -109.0
+offset_right = 214.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 7
+alignment = 1
+
+[node name="Label" type="Label" parent="pause_principal/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_6aekh")
+theme_override_font_sizes/font_size = 35
+text = "JOGO PAUSADO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resume" type="Button" parent="pause_principal/VBoxContainer" groups=["pause_buttons"]]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_noiuc")
+theme_override_font_sizes/font_size = 24
+text = "Voltar ao jogo"
+flat = true
+
+[node name="controls" type="Button" parent="pause_principal/VBoxContainer" groups=["pause_buttons"]]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_noiuc")
+theme_override_font_sizes/font_size = 24
+text = "Controles
+"
+flat = true
+
+[node name="menu" type="Button" parent="pause_principal/VBoxContainer" groups=["pause_buttons"]]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_noiuc")
+theme_override_font_sizes/font_size = 24
+text = "Sair para o menu"
+flat = true
+
+[node name="desktop" type="Button" parent="pause_principal/VBoxContainer" groups=["pause_buttons"]]
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_noiuc")
+theme_override_font_sizes/font_size = 24
+text = "Sair para o desktop"
+flat = true
+
+[node name="pause_controls" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_drmau")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="pause_controls"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -204.5
+offset_top = -144.5
+offset_right = 204.5
+offset_bottom = 144.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="Top" type="Label" parent="pause_controls/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_jxpuf")
+theme_override_font_sizes/font_size = 28
+text = "----- Controles -----"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="Label" parent="pause_controls/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_jxpuf")
+theme_override_font_sizes/font_size = 28
+text = "WASD - Andar
+ESPAÇO - Colocar Bloco
+ESC - Pausar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bottom" type="Label" parent="pause_controls/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_jxpuf")
+theme_override_font_sizes/font_size = 28
+text = "-------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Back" type="Button" parent="pause_controls"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_7sef3")
+theme_override_font_sizes/font_size = 18
+text = "Voltar"
