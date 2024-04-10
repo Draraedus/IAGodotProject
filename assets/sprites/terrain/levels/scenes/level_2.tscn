@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/game/level_2.gd" id="1_3rtc2"]
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_qgvxq"]
-[ext_resource type="PackedScene" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_n2kua"]
+[ext_resource type="PackedScene" uid="uid://osxun0h2w3fi" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_n2kua"]
 [ext_resource type="PackedScene" uid="uid://bmhak1qujoph6" path="res://assets/sprites/terrain/components/scenes/door_component.tscn" id="3_8n0ys"]
 [ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="4_26pd5"]
 [ext_resource type="PackedScene" uid="uid://mr87ifmcw61x" path="res://prefabs/goal.tscn" id="5_15p61"]

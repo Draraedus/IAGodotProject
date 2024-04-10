@@ -68,7 +68,7 @@ func _animate():
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcl61"]
-size = Vector2(21, 9)
+size = Vector2(21, 10)
 
 [sub_resource type="Animation" id="Animation_rldiq"]
 length = 0.001
@@ -399,7 +399,7 @@ script = SubResource("GDScript_tqor3")
 _animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -4.5)
+position = Vector2(-0.5, -5)
 shape = SubResource("RectangleShape2D_hcl61")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
