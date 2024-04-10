@@ -1,12 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://1o3v8i1adiqm"]
+[gd_scene load_steps=13 format=3 uid="uid://1o3v8i1adiqm"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_exowq"]
 [ext_resource type="Script" path="res://assets/sprites/level_1.gd" id="1_q0m30"]
-[ext_resource type="PackedScene" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_ndoes"]
+[ext_resource type="PackedScene" uid="uid://osxun0h2w3fi" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_ndoes"]
 [ext_resource type="PackedScene" uid="uid://bmhak1qujoph6" path="res://assets/sprites/terrain/components/scenes/door_component.tscn" id="3_kwhuy"]
 [ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="4_87v1t"]
 [ext_resource type="PackedScene" uid="uid://cxvle1j5jhtg0" path="res://scenes/characters/hog_enemy.tscn" id="5_fakdc"]
+[ext_resource type="PackedScene" uid="uid://mr87ifmcw61x" path="res://prefabs/goal.tscn" id="5_hhcda"]
 [ext_resource type="PackedScene" uid="uid://cmag50sxwdpxq" path="res://scenes/ui/pause_menu.tscn" id="7_e56fy"]
+[ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Transition.gd" id="8_al7uo"]
+[ext_resource type="Shader" path="res://assets/sprites/terrain/levels/shader/transition.gdshader" id="9_wtdls"]
+[ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Color_Rect.gd" id="10_0wu5c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hr805"]
+shader = ExtResource("9_wtdls")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
 
 [node name="level_1" type="Node2D"]
 script = ExtResource("1_q0m30")
@@ -41,7 +52,11 @@ position = Vector2(1016, 432)
 [node name="DoorComponent2" parent="Componentes" instance=ExtResource("3_kwhuy")]
 z_index = 1
 texture_filter = 1
-position = Vector2(1544, 760)
+position = Vector2(2838, 723)
+
+[node name="goal" parent="." instance=ExtResource("5_hhcda")]
+position = Vector2(1123, 519)
+scene_levels = "res://scenes/ui/menu.tscn"
 
 [node name="Player" parent="." instance=ExtResource("4_87v1t")]
 z_index = 1
@@ -53,5 +68,21 @@ zoom = Vector2(2, 2)
 
 [node name="hog_enemy" parent="." instance=ExtResource("5_fakdc")]
 position = Vector2(258, 231)
+
+[node name="Transition" type="CanvasLayer" parent="."]
+script = ExtResource("8_al7uo")
+
+[node name="Color_Rect" type="ColorRect" parent="Transition"]
+material = SubResource("ShaderMaterial_hr805")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0, 0, 0, 1)
+script = ExtResource("10_0wu5c")
+metadata/_edit_use_anchors_ = true
 
 [node name="Pause_menu" parent="." instance=ExtResource("7_e56fy")]
