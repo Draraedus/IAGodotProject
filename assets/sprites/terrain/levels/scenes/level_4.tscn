@@ -1,9 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://md143glkff1p"]
+[gd_scene load_steps=10 format=3 uid="uid://md143glkff1p"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_ajpf6"]
 [ext_resource type="PackedScene" uid="uid://osxun0h2w3fi" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_dfq85"]
 [ext_resource type="PackedScene" uid="uid://bmhak1qujoph6" path="res://assets/sprites/terrain/components/scenes/door_component.tscn" id="3_jf8we"]
+[ext_resource type="PackedScene" uid="uid://mr87ifmcw61x" path="res://prefabs/goal.tscn" id="4_g32if"]
 [ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="4_pedmk"]
+[ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Transition.gd" id="6_w5asu"]
+[ext_resource type="Shader" path="res://assets/sprites/terrain/levels/shader/transition.gdshader" id="7_uj64d"]
+[ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Color_Rect.gd" id="8_17kxo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q8ivx"]
+shader = ExtResource("7_uj64d")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 0.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,14 +39,18 @@ position = Vector2(-528, -968)
 [node name="DoorComponent" parent="Componentes" instance=ExtResource("3_jf8we")]
 z_index = 1
 texture_filter = 1
-position = Vector2(1760, 1824)
+position = Vector2(154, 1835)
 _teleport_position = Vector2(2104, 808)
 
 [node name="DoorComponent2" parent="Componentes" instance=ExtResource("3_jf8we")]
 z_index = 1
 texture_filter = 1
-position = Vector2(2312, 920)
+position = Vector2(2325, 917)
 _teleport_position = Vector2(2104, 808)
+
+[node name="goal" parent="." instance=ExtResource("4_g32if")]
+position = Vector2(1232, 857)
+scene_levels = "res://scenes/ui/menu.tscn"
 
 [node name="Player" parent="." instance=ExtResource("4_pedmk")]
 z_index = 1
@@ -44,3 +59,17 @@ scale = Vector2(1.4, 1.4)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
+
+[node name="Transition" type="CanvasLayer" parent="."]
+script = ExtResource("6_w5asu")
+
+[node name="Color_Rect" type="ColorRect" parent="Transition"]
+material = SubResource("ShaderMaterial_q8ivx")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("8_17kxo")
+metadata/_edit_use_anchors_ = true

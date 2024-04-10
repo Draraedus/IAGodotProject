@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Character_pig
+class_name character_pig
 
 var _state_machine
 
