@@ -7,7 +7,7 @@ var can_resume: bool = false
 func _ready():
 	hide()
 
-func _process(delta):
+func _process(_delta):
 	if can_resume && Input.is_action_just_pressed("pause_game"):
 		resume()
 		

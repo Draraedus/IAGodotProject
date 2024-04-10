@@ -23,9 +23,9 @@ func _process(delta):
 	 # Incrementa o tempo decorrido desde o último quadro
 	tempo_decorrido += delta
 	
-	# Verifica se passaram 2 segundos
-	if tempo_decorrido >= 0.6:
-		path.append_array(path_finding.a_star(path[path.size()-1], player.position))
+	if tempo_decorrido >= 0.4:
+		path = path_finding.a_star(mob.position, player.position)
+		mob.target_path = path
 		tempo_decorrido = 0.0
 		
 	if $hog_enemy && !path.size() <= 1:

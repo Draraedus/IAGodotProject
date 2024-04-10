@@ -1,10 +1,10 @@
 [gd_scene load_steps=25 format=3 uid="uid://cxvle1j5jhtg0"]
 
+[ext_resource type="Script" path="res://scripts/entities/hog_enemy.gd" id="1_31vkd"]
 [ext_resource type="Texture2D" uid="uid://bjc7cohksxbsn" path="res://assets/sprites/enemies/Warhog/Spritesheets/Warhog.png" id="1_l2svg"]
-[ext_resource type="Script" path="res://scripts/hog_enemy.gd" id="1_yfic4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcl61"]
-size = Vector2(21, 7)
+size = Vector2(21, 9)
 
 [sub_resource type="Animation" id="Animation_rldiq"]
 length = 0.001
@@ -330,11 +330,11 @@ states/walk/position = Vector2(559, 169)
 
 [node name="hog_enemy" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 texture_filter = 1
-script = ExtResource("1_yfic4")
+script = ExtResource("1_31vkd")
 _animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -3.5)
+position = Vector2(-0.5, -4.5)
 shape = SubResource("RectangleShape2D_hcl61")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

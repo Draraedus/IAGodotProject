@@ -8,10 +8,6 @@ func _ready():
 		button.mouse_exited.connect(mouse_interaction.bind(button, "exited"))
 		button.mouse_entered.connect(mouse_interaction.bind(button, "entered"))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
 func on_button_pressed(button: Button):
 	match button.name:
 		"resume":

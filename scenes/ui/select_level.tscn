@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://dksmerhmryams"]
+
+[ext_resource type="Script" path="res://scripts/ui/select_level.gd" id="1_44der"]
+[ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="1_iw7u4"]
+[ext_resource type="PackedScene" uid="uid://dyk2gh5muq5xp" path="res://scenes/ui/back_button.tscn" id="2_wib2g"]
+
+[sub_resource type="FontVariation" id="FontVariation_ab771"]
+base_font = ExtResource("1_iw7u4")
+
+[sub_resource type="FontVariation" id="FontVariation_in347"]
+base_font = ExtResource("1_iw7u4")
+
+[node name="Select_level" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44der")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.137255, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = -135.5
+offset_right = 266.0
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_ab771")
+theme_override_font_sizes/font_size = 35
+text = "Escolha a Fase"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_1" type="Button" parent="ColorRect/VBoxContainer" groups=["select_level_button"]]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_in347")
+theme_override_font_sizes/font_size = 24
+text = "Fase 1"
+flat = true
+
+[node name="level_2" type="Button" parent="ColorRect/VBoxContainer" groups=["select_level_button"]]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_in347")
+theme_override_font_sizes/font_size = 24
+text = "Fase 2"
+flat = true
+
+[node name="level_3" type="Button" parent="ColorRect/VBoxContainer" groups=["select_level_button"]]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_in347")
+theme_override_font_sizes/font_size = 24
+text = "Fase 3"
+flat = true
+
+[node name="level_4" type="Button" parent="ColorRect/VBoxContainer" groups=["select_level_button"]]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = SubResource("FontVariation_in347")
+theme_override_font_sizes/font_size = 24
+text = "Fase 4"
+flat = true
+
+[node name="BackButton" parent="." instance=ExtResource("2_wib2g")]
+layout_mode = 1
+scene_path = "res://scenes/ui/menu.tscn"

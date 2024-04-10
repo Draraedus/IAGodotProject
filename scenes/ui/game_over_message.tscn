@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckeqgvutmu8ib"]
 
-[ext_resource type="Script" path="res://scripts/game_over_message.gd" id="1_ki0fv"]
+[ext_resource type="Script" path="res://scripts/ui/game_over_message.gd" id="1_ki0fv"]
 [ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="2_hgu7v"]
 
 [sub_resource type="FontVariation" id="FontVariation_unh6r"]

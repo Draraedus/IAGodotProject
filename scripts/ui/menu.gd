@@ -11,7 +11,7 @@ func _ready():
 func on_button_pressed(button: Button):
 	match button.name:
 		"Play":
-			var _game: bool = get_tree().change_scene_to_file("res://assets/sprites/terrain/levels/scenes/level_1.tscn")
+			var _game: bool = get_tree().change_scene_to_file("res://scenes/ui/select_level.tscn")
 			
 		"Configs":
 			var _configs: bool = get_tree().change_scene_to_file("res://scenes/ui/configs.tscn")
@@ -35,7 +35,3 @@ func mouse_interaction(button: Button, state: String):
 			
 		"entered":
 			button.modulate.a = 0.5
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass

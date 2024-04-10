@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://k4fojf34r1kp"]
 
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_jtbva"]
+[ext_resource type="Script" path="res://scripts/ui/menu.gd" id="1_jtbva"]
 [ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="2_e7me5"]
 [ext_resource type="AudioStream" uid="uid://cfjym5j2otdxb" path="res://assets/music/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="3_o0v30"]
 

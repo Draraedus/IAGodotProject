@@ -1,6 +1,6 @@
 extends Area2D
 
-const player := preload("res://scripts/player.gd")
+const player := preload("res://scripts/entities/player.gd")
 
 var _player_ref: Character_pig = null
 

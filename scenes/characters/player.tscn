@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://b16vwshb5vh2j"]
 
-[ext_resource type="Script" path="res://scripts/player.gd" id="1_iyu0q"]
+[ext_resource type="Script" path="res://scripts/entities/player.gd" id="1_6ruij"]
 [ext_resource type="Texture2D" uid="uid://c2qknmekm7npl" path="res://assets/sprites/character/pendleton_pig.png" id="2_gty4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3mpb"]
@@ -225,7 +225,7 @@ states/walk/position = Vector2(508, 172)
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("_animation_tree")]
 texture_filter = 1
 position = Vector2(0, -7)
-script = ExtResource("1_iyu0q")
+script = ExtResource("1_6ruij")
 _animation_tree = NodePath("AnimationTree")
 metadata/_edit_group_ = true
 
