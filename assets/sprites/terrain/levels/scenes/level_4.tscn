@@ -1,13 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://md143glkff1p"]
+[gd_scene load_steps=13 format=3 uid="uid://md143glkff1p"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_ajpf6"]
-[ext_resource type="PackedScene" uid="uid://osxun0h2w3fi" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_dfq85"]
+[ext_resource type="Script" path="res://scripts/game/level_4.gd" id="1_wpkd2"]
+[ext_resource type="PackedScene" path="res://assets/sprites/terrain/scenes/interior.tscn" id="2_dfq85"]
 [ext_resource type="PackedScene" uid="uid://bmhak1qujoph6" path="res://assets/sprites/terrain/components/scenes/door_component.tscn" id="3_jf8we"]
 [ext_resource type="PackedScene" uid="uid://mr87ifmcw61x" path="res://prefabs/goal.tscn" id="4_g32if"]
 [ext_resource type="PackedScene" uid="uid://b16vwshb5vh2j" path="res://scenes/characters/player.tscn" id="4_pedmk"]
 [ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Transition.gd" id="6_w5asu"]
 [ext_resource type="Shader" path="res://assets/sprites/terrain/levels/shader/transition.gdshader" id="7_uj64d"]
 [ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Color_Rect.gd" id="8_17kxo"]
+[ext_resource type="PackedScene" uid="uid://cmag50sxwdpxq" path="res://scenes/ui/pause_menu.tscn" id="9_qgt1j"]
+[ext_resource type="AudioStream" uid="uid://baaxwu5swwyxp" path="res://assets/music/Juhani Junkala [Retro Game Music Pack] Level 3.wav" id="10_ojc1r"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q8ivx"]
 shader = ExtResource("7_uj64d")
@@ -16,7 +19,8 @@ shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(1, 1, 1, 1)
 shader_parameter/line_color_b = Color(0, 0, 0, 1)
 
-[node name="Node2D" type="Node2D"]
+[node name="level_4" type="Node2D"]
+script = ExtResource("1_wpkd2")
 
 [node name="TileMap" parent="." instance=ExtResource("1_ajpf6")]
 position = Vector2(-1, 0)
@@ -73,3 +77,30 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("8_17kxo")
 metadata/_edit_use_anchors_ = true
+
+[node name="enemy_position1" type="Marker2D" parent="."]
+position = Vector2(1351, 922)
+
+[node name="enemy_position2" type="Marker2D" parent="."]
+position = Vector2(1505, 402)
+
+[node name="enemy_position3" type="Marker2D" parent="."]
+position = Vector2(895, 470)
+
+[node name="enemy_position4" type="Marker2D" parent="."]
+position = Vector2(1014, 179)
+
+[node name="enemy_position5" type="Marker2D" parent="."]
+position = Vector2(143, 327)
+
+[node name="enemy_position6" type="Marker2D" parent="."]
+position = Vector2(327, 81)
+
+[node name="enemy_position7" type="Marker2D" parent="."]
+position = Vector2(610, 190)
+
+[node name="Pause_menu" parent="." instance=ExtResource("9_qgt1j")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ojc1r")
+autoplay = true

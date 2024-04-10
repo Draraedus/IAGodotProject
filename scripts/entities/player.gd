@@ -26,7 +26,7 @@ func _physics_process(_delta: float):
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var _collision = get_slide_collision(i)
-		if get_slide_collision(0).get_collider().name == "hog_enemy":
+		if get_slide_collision(0).get_collider().get_class() == "CharacterBody2D":
 			game_over = true
 	
 func _move():

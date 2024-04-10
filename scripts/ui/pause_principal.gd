@@ -18,6 +18,7 @@ func on_button_pressed(button: Button):
 			get_parent().get_node("pause_controls").show()
 			
 		"menu":
+			get_tree().paused = false
 			var _game: bool = get_tree().change_scene_to_file("res://scenes/ui/menu.tscn")
 			
 		"desktop":

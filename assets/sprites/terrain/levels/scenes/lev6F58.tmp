@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://1o3v8i1adiqm"]
+[gd_scene load_steps=12 format=3 uid="uid://1o3v8i1adiqm"]
 
 [ext_resource type="PackedScene" uid="uid://cyrqldn7aoipe" path="res://assets/sprites/terrain/scenes/terrain.tscn" id="1_exowq"]
 [ext_resource type="Script" path="res://assets/sprites/level_1.gd" id="1_q0m30"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Transition.gd" id="8_al7uo"]
 [ext_resource type="Shader" path="res://assets/sprites/terrain/levels/shader/transition.gdshader" id="9_wtdls"]
 [ext_resource type="Script" path="res://assets/sprites/terrain/levels/scripts/Color_Rect.gd" id="10_0wu5c"]
-[ext_resource type="AudioStream" uid="uid://b4jyyw2pgdwvu" path="res://assets/music/Juhani Junkala [Retro Game Music Pack] Level 1.wav" id="11_txej3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_hr805"]
 shader = ExtResource("9_wtdls")
@@ -83,13 +82,3 @@ script = ExtResource("10_0wu5c")
 metadata/_edit_use_anchors_ = true
 
 [node name="Pause_menu" parent="." instance=ExtResource("7_e56fy")]
-
-[node name="enemy_position1" type="Marker2D" parent="."]
-position = Vector2(1366, 681)
-
-[node name="enemy_position2" type="Marker2D" parent="."]
-position = Vector2(166, 320)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_txej3")
-autoplay = true

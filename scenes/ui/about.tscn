@@ -1,11 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://cub7ve4fgn1xw"]
+[gd_scene load_steps=13 format=3 uid="uid://cub7ve4fgn1xw"]
 
 [ext_resource type="FontFile" uid="uid://br5j4dnbk4a1b" path="res://assets/fonts/Kurland.ttf" id="1_vm5wo"]
 [ext_resource type="PackedScene" uid="uid://dyk2gh5muq5xp" path="res://scenes/ui/back_button.tscn" id="2_xghm0"]
 [ext_resource type="AudioStream" uid="uid://cfjym5j2otdxb" path="res://assets/music/Juhani Junkala [Retro Game Music Pack] Title Screen.wav" id="3_s5jdi"]
 
+[sub_resource type="ImageTexture" id="ImageTexture_otacg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2e1q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uter5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8b0w6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fcbg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v0hao"]
+
+[sub_resource type="Theme" id="Theme_3iliu"]
+VScrollBar/icons/decrement = SubResource("ImageTexture_otacg")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_otacg")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_otacg")
+VScrollBar/icons/increment = SubResource("ImageTexture_otacg")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_otacg")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_otacg")
+VScrollBar/styles/grabber = SubResource("StyleBoxEmpty_g2e1q")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxEmpty_uter5")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxEmpty_8b0w6")
+VScrollBar/styles/scroll = SubResource("StyleBoxEmpty_8fcbg")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxEmpty_v0hao")
+
 [sub_resource type="FontVariation" id="FontVariation_84jr4"]
 base_font = ExtResource("1_vm5wo")
+
+[sub_resource type="Theme" id="Theme_q5hph"]
+RichTextLabel/fonts/normal_font = ExtResource("1_vm5wo")
 
 [node name="About" type="Control"]
 layout_mode = 3
@@ -24,47 +52,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.137255, 0, 0, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -166.5
-offset_top = -137.5
-offset_right = 166.5
-offset_bottom = 137.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Top" type="Label" parent="VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_fonts/font = SubResource("FontVariation_84jr4")
-theme_override_font_sizes/font_size = 30
-text = "----- Sobre Nós -----"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-text = "O jogo foi desenvolvido por Adriel Luiz, Gabriel Marques, Isabela de Gondra e Jean Charles.
-O jogo foi idealizado em PacMan no conceito de fuga de monstros dentro de uma mapa 2D, porém nossa idéia foi utilizar IA para uma gameplay progressiva e desafiadora dentro do jogo. 
-O jogo foi desenvolvido para a matéria de de Inteligência Artificial."
-fit_content = true
-scroll_active = false
-
-[node name="Bottom" type="Label" parent="VBoxContainer"]
-texture_filter = 1
-layout_mode = 2
-theme_override_fonts/font = SubResource("FontVariation_84jr4")
-theme_override_font_sizes/font_size = 30
-text = "-------------------------------"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="BackButton" parent="." instance=ExtResource("2_xghm0")]
 layout_mode = 1
 scene_path = "res://scenes/ui/menu.tscn"
@@ -72,3 +59,88 @@ scene_path = "res://scenes/ui/menu.tscn"
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_s5jdi")
 autoplay = true
+
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -136.5
+offset_top = 16.0
+offset_right = 163.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_3iliu")
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VScrollBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Top" type="Label" parent="VScrollBar/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_84jr4")
+theme_override_font_sizes/font_size = 30
+text = "----- Sobre -----"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VScrollBar/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_q5hph")
+text = "Pig Run Pig é um jogo de fuga de dungeon onde o protagonista é um porquinho azarado que se depara com o desafio de fugir de vários  hogs selvagens dentro de uma dungeon.
+Esse jogo foi idelizado em um jogo mais antigo chamado PacMan.
+"
+fit_content = true
+scroll_active = false
+text_direction = 1
+
+[node name="Top2" type="Label" parent="VScrollBar/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_84jr4")
+theme_override_font_sizes/font_size = 30
+text = "----- Créditos -----"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="VScrollBar/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_q5hph")
+text = "Criadores do Jogo:
+Adriel Luiz
+Gabriel Marques
+Isabela de Gondra
+Jean Charles
+
+Agradecimentos Especiais:
+Professor: Hendrik Macedo
+
+Sprites:
+Pig: Aidan_Walker
+WarHog:  Admurin
+Asset Dungeon Art: Pixel_Poem
+Additional Asset Dungeon Art: o_lobster
+
+Music: Juhani Junkala"
+fit_content = true
+scroll_active = false
+text_direction = 1
+structured_text_bidi_override = 4
+
+[node name="Bottom2" type="Label" parent="VScrollBar/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_84jr4")
+theme_override_font_sizes/font_size = 30
+text = "-------------------------------"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -7,6 +7,8 @@ extends Node2D
 
 var mob: CharacterBody2D
 var mob1: CharacterBody2D
+var mob2: CharacterBody2D
+var mob3: CharacterBody2D
 
 func _ready():
 	pause_menu.node = self
@@ -15,12 +17,20 @@ func _ready():
 	add_child(mob)
 	mob1 = enemy.instantiate()
 	add_child(mob1)
+	mob2 = enemy.instantiate()
+	add_child(mob2)
+	mob3 = enemy.instantiate()
+	add_child(mob3)
 	
 	mob.position = get_node("enemy_position1").position
 	mob1.position =  get_node("enemy_position2").position
+	mob2.position = get_node("enemy_position3").position
+	mob3.position =  get_node("enemy_position4").position
 	
 	mob.target_path = player.position
 	mob1.target_path = player.position
+	mob2.target_path = player.position
+	mob3.target_path = player.position
 
 func _process(delta: float):
 	if Input.is_action_just_pressed("pause_game"):
@@ -28,4 +38,6 @@ func _process(delta: float):
 		
 	mob.target_path = player.position
 	mob1.target_path = player.position
+	mob2.target_path = player.position
+	mob3.target_path = player.position
 	

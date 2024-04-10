@@ -15,6 +15,8 @@ class NodeAux:
 func a_star(start_pos: Vector2, end_pos: Vector2, is_diagonal: bool = false) -> Array:
 	var open_list = []
 	var closed_list = []
+	
+	var path_size_counter = 0
 
 	var start_node = NodeAux.new(start_pos)
 	var end_node = NodeAux.new(end_pos)
@@ -22,6 +24,9 @@ func a_star(start_pos: Vector2, end_pos: Vector2, is_diagonal: bool = false) -> 
 	open_list.append(start_node)
 
 	while open_list.size() > 0:
+		path_size_counter += 1
+		if path_size_counter == 50:
+			return []
 		var current_node = open_list[0]
 		var current_index = 0
 
