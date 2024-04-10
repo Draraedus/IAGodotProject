@@ -11,7 +11,7 @@ func _ready():
 func on_button_pressed(button: Button):
 	match button.name:
 		"Play":
-			var _game: bool = get_tree().change_scene_to_file("res://scenes/game/game.tscn")
+			var _game: bool = get_tree().change_scene_to_file("res://assets/sprites/terrain/levels/scenes/level_1.tscn")
 			
 		"Configs":
 			var _configs: bool = get_tree().change_scene_to_file("res://scenes/ui/configs.tscn")

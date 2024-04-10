@@ -56,6 +56,7 @@ vertical_alignment = 1
 
 [node name="back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 theme_override_fonts/font = SubResource("FontVariation_unh6r")
 theme_override_font_sizes/font_size = 24
 text = "Voltar ao menu"
