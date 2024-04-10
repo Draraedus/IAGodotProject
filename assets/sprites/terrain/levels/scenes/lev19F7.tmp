@@ -53,10 +53,6 @@ texture_filter = 1
 position = Vector2(3350, 901)
 _teleport_position = Vector2(2104, 808)
 
-[node name="goal" parent="." instance=ExtResource("5_15p61")]
-position = Vector2(1920, 442)
-scene_levels = "res://scenes/ui/menu.tscn"
-
 [node name="Player" parent="." instance=ExtResource("4_26pd5")]
 z_index = 1
 position = Vector2(72, 24)
@@ -65,17 +61,17 @@ scale = Vector2(1.4, 1.4)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(2, 2)
 
+[node name="goal" parent="." instance=ExtResource("5_15p61")]
+position = Vector2(1920, 442)
+scene_levels = "res://scenes/ui/menu.tscn"
+
 [node name="Transition" type="CanvasLayer" parent="."]
 script = ExtResource("6_drfyq")
 
 [node name="Color_Rect" type="ColorRect" parent="Transition"]
 material = SubResource("ShaderMaterial_2n55d")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+offset_right = 40.0
+offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("7_3tx4a")
+metadata/_edit_use_anchors_ = true
