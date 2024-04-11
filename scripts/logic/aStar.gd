@@ -95,7 +95,6 @@ func get_neighbors(position: Vector2, ignored_positions: Vector2, is_diagonal: b
 	
 	var valid_neighbors: Array = []
 	for neighbor in neighbors:
-		print(ignored_positions.distance_to(Vector2(neighbor)))
 		if ignored_positions.distance_to(Vector2(neighbor)) > 8:
 			valid_neighbors.append(neighbor)
 	return valid_neighbors
