@@ -4,11 +4,11 @@ Pig Run Pig é um jogo de fuga de escape room onde o protagonista é um porquinh
 
 ## Link do vídeo do youtube:
 
-[Clique aqui para acessar o vídeo](https://link-url-here.org)
+[Clique aqui para acessar o vídeo](https://youtu.be/f6c4NTHd4TM?feature=shared)
 
 ## Link para o relatório:
 
-[Clique aqui para acessar o relatório]([https://link-url-here.org](https://docs.google.com/document/d/1110fM0jufx5qd0H5tfFx2UzLOSWxcoPhzXrBp5SY8ck/edit))
+[Clique aqui para acessar o relatório](https://docs.google.com/document/d/1110fM0jufx5qd0H5tfFx2UzLOSWxcoPhzXrBp5SY8ck/edit)
 
 ## Objetivo
 
