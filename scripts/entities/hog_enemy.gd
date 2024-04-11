@@ -3,7 +3,8 @@ extends CharacterBody2D
 var _state_machine
 var path_finding = preload("res://scripts/logic/aStar.gd").new()
 var path: Array
-var tempo_decorrido = 0.0
+var collided_path: Vector2 = Vector2.ZERO
+var tempo_decorrido: float = 0.0
 
 @export_category("Variables")
 @export var _move_speed: float = 100.0
@@ -18,24 +19,29 @@ var tempo_decorrido = 0.0
 func _ready():
 	_state_machine = _animation_tree.get("parameters/playback")
 	
-	path = path_finding.a_star(position, target_path)
+	path = path_finding.a_star(position, target_path, collided_path)
 	
 func _physics_process(_delta: float):
 	
 	tempo_decorrido += _delta
 	if tempo_decorrido >= 0.4:
-		path = path_finding.a_star(position, target_path)
+		path = path_finding.a_star(position, target_path, collided_path)
 		tempo_decorrido = 0.0
 	
 	if !path.size() <= 1:
 		if position.distance_to(path[0]) < _move_speed * _delta:
 			path.pop_front()
+			
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		collided_path = collision.get_position()
+	
 	_animate()
 	_move()
 	move_and_slide()
 	
 func _move():
-	var _direction
+	var _direction: Vector2
 	if path.size() > 1:
 		_direction = (Vector2(Vector2i(path[0])) - Vector2(Vector2i(position)))
 	else:

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c2qknmekm7npl" path="res://assets/sprites/character/pendleton_pig.png" id="2_gty4y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3mpb"]
-size = Vector2(10, 7)
+size = Vector2(10, 6)
 
 [sub_resource type="Animation" id="Animation_ci71x"]
 length = 0.001
@@ -231,7 +231,7 @@ metadata/_edit_group_ = true
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 show_behind_parent = true
-position = Vector2(0, 3.5)
+position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_i3mpb")
 
 [node name="Sprites" type="Sprite2D" parent="."]

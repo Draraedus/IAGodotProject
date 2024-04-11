@@ -4,11 +4,12 @@
 
 [sub_resource type="GDScript" id="GDScript_tqor3"]
 script/source = "extends CharacterBody2D
+class_name Wild_Hog
 
 var _state_machine
 var path_finding = preload(\"res://scripts/logic/aStar.gd\").new()
 var path: Array
-var collided_path: Vector2 = Vector2.ZERO
+var collided_path: Array = []
 var tempo_decorrido: float = 0.0
 
 @export_category(\"Variables\")
@@ -39,8 +40,9 @@ func _physics_process(_delta: float):
 			
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
-		collided_path = collision.get_position()
-	
+		if !collided_path.has(collision.get_collider().get_position):
+			collided_path.append(collision.get_collider().get_position)
+		
 	_animate()
 	_move()
 	move_and_slide()
@@ -401,6 +403,10 @@ states/walk/position = Vector2(559, 169)
 z_index = 1
 texture_filter = 1
 script = SubResource("GDScript_tqor3")
+_move_speed = null
+_friction = null
+_acceleration = null
+target_path = null
 _animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
